@@ -5,10 +5,12 @@ on:
     branches:
       - master
       - dev
+      - feat/msal
   pull_request:
     branches:
       - master
       - dev
+      - feat/msal
 
 jobs:
   test:
