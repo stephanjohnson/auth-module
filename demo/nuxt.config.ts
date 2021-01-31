@@ -127,7 +127,22 @@ export default <NuxtConfig>{
         responseType: 'code',
         grantType: 'authorization_code',
         clientId: 'test-client'
-      }
+      },
+      aadb2c: {
+        scheme: 'msal',
+        endpoints: {
+          authorization: `https://<tenant>.b2clogin.com/<tenant url>/<policy>/oauth2/v2.0/authorize`,
+          token: `https://<tenant>.b2clogin.com/<tenant url>/<policy>/oauth2/v2.0/token`,
+          logout: `https://<tenant>.b2clogin.com/<tenant url>/<policy>/oauth2/v2.0/logout`,
+        },
+        authority: 'https://<tenant>.b2clogin.com/<tenant url>/<policy>',
+        knownAuthorities: ['<tenant>.b2clogin.com'],
+        redirectUri: 'http://localhost:3000/callback',
+        clientId: '<client id>',
+        scope: ['openid', 'offline_access', '<client id>'],
+        codeChallengeMethod: 'S256',
+        responseType: 'code',
+      },
     }
   }
 }

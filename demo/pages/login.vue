@@ -65,6 +65,16 @@
           <div class="mb-2">
             <b-btn
               block
+              :style="{ background: 'aero' }"
+              class="login-button"
+              @click="$auth.loginWith('aadb2c')"
+            >
+              Login with Azure Active Directory B2C
+            </b-btn>
+          </div>
+          <div class="mb-2">
+            <b-btn
+              block
               :style="{ background: '#ff2d20' }"
               class="login-button"
               @click="loginSanctum"

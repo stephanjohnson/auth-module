@@ -37,6 +37,7 @@
     "test": "yarn lint && jest"
   },
   "dependencies": {
+    "@azure/msal-node": "^1.0.0-beta.4",
     "@nuxtjs/axios": "^5.12.5",
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
